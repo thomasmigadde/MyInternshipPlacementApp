@@ -1,15 +1,16 @@
 // signuppage.jsx
 import React from "react";
+import {useState } from "react";
 
 export default function SignupPage() {
+  const [text, setText] = useState("");
   return (
-    <div className="signup-page-container">
+       <div className="signup-page-container">
         <div>
-             <h1>Signup Page</h1>
+             <input type = {"text"} placeholder = {"Username"} value = {text} onChange={(e) => setText(e.target.value)}  className = "inputClass"/>
         </div>
         <div>
-            <input type = {type} placeholder= {Username} className = "inputClasss" />
-            <p>Put your signup form here.</p>
+            <input type = {"text"} placeholder = {"Email"} value = {text} onChange={(e) => setText(e.target.value)}  className = "inputClass"/>
         </div>      
     </div>
   );
