@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import heropic from "./heropic.jpg";
 import {useNavigate} from 'react-router-dom';
+import { useNavigation } from './usenavigation.jsx';
 const Home = () => {
   
-  const navigate = useNavigate();
+  const {goToSignup} = useNavigation();
   
   return (
     <>
@@ -22,12 +23,14 @@ const Home = () => {
               <button 
                 type="button"
                 className="loginButtonClass" 
+                onClick={goToSignup}
               >
                 Login
               </button>
               <button 
                 type="button"
                 className="signupButtonClass" 
+                onClick={goToSignup}
               >
                 Signup
               </button>
@@ -44,12 +47,14 @@ const Home = () => {
               <button 
                 type="button"
                 className="loginButtonClass" 
+                onClick={goToSignup}
               >
                 Login
               </button>
               <button 
                 type="button"
-                className="signupButtonClass" 
+                className="signupButtonClass"
+                onClick={goToSignup} 
               >
                 Signup
               </button>
@@ -66,12 +71,14 @@ const Home = () => {
               <button 
                 type="button"
                 className="loginButtonClass" 
+                onClick={goToSignup}
               >
                 Login
               </button>
               <button 
                 type="button"
                 className="signupButtonClass" 
+                onClick={goToSignup}
               >
                 Signup
               </button>
@@ -88,12 +95,14 @@ const Home = () => {
               <button 
                 type="button"
                 className="loginButtonClass" 
+                onClick={goToSignup}
               >
                 Login
               </button>
               <button 
                 type="button"
                 className="signupButtonClass" 
+                onClick={goToSignup}
               >
                 Signup
               </button>

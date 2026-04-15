@@ -1,5 +1,5 @@
 
-import Home from "../PAGES/home.jsx"
+import Home from "/PAGES/home.jsx"
 import "/STYLES/loginPage.css"
 import "/STYLES/SignupPage.css"
 import SignupPage from "/PAGES/signuppage.jsx"
@@ -10,6 +10,7 @@ import {Routes, Route} from 'react-router-dom'
 import NavBar from '../components/NavBar';
 import "/STYLES/SignupPage.css"
 import "/STYLES/loginPage.css"
+import NotFoundPage from "/PAGES/NotFound.jsx";
 
 function App() {
   return(

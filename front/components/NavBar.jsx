@@ -1,13 +1,14 @@
-import { Link } from 'react-router-dom';
+import { useNavigation } from '/PAGES/usenavigation.jsx';
 
 function NavBar() {
-    return(
-        <nav>
-        <div>
-          <Link to="/">Home</Link>
-          <Link to="/SignupPage">Signup</Link>
-        </div>
-        </nav>
-    );
-};
+  const { goToHome, goToSignup } = useNavigation();
+
+  return (
+    <nav>
+      <button onClick={goToHome}>Home</button>
+      <button onClick={goToSignup}>Signup</button>
+    </nav>
+  );
+}
+
 export default NavBar;

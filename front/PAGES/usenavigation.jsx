@@ -23,4 +23,5 @@ export function useNavigation() {
     if (!context) {
         throw new Error("useNavigation must be used within a NavigationProvider");
     }
+    return context;
 }
