@@ -22,14 +22,12 @@ const Home = () => {
               <button 
                 type="button"
                 className="loginButtonClass" 
-                onClick={() => navigate('/SignupPage')}
               >
                 Login
               </button>
               <button 
                 type="button"
                 className="signupButtonClass" 
-                onClick={() => navigate('/SignupPage')}
               >
                 Signup
               </button>
@@ -46,14 +44,12 @@ const Home = () => {
               <button 
                 type="button"
                 className="loginButtonClass" 
-                onClick={() => navigate('/SignupPage')}
               >
                 Login
               </button>
               <button 
                 type="button"
                 className="signupButtonClass" 
-                onClick={() => navigate('/SignupPage')}
               >
                 Signup
               </button>
@@ -70,14 +66,12 @@ const Home = () => {
               <button 
                 type="button"
                 className="loginButtonClass" 
-                onClick={() => navigate('/SignupPage')}
               >
                 Login
               </button>
               <button 
                 type="button"
                 className="signupButtonClass" 
-                onClick={() => navigate('/SignupPage')}
               >
                 Signup
               </button>
@@ -94,14 +88,12 @@ const Home = () => {
               <button 
                 type="button"
                 className="loginButtonClass" 
-                onClick={() => navigate('/SignupPage')}
               >
                 Login
               </button>
               <button 
                 type="button"
                 className="signupButtonClass" 
-                onClick={() => navigate('/SignupPage')}
               >
                 Signup
               </button>
