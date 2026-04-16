@@ -2,7 +2,7 @@
 import React from "react";
 import {useState, useEffect} from "react";
 import { useNavigation } from "./usenavigation.jsx";
-import {api} from "front/api.js"
+import {api} from "/front/api.js"
 
 export default function DisplayPage({userId}) {
 const [user , setUser] = useState(null)
