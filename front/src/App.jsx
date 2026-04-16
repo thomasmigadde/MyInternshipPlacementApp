@@ -6,6 +6,7 @@ import SignupPage from "/PAGES/signuppage.jsx"
 import SignupPage2 from "/PAGES/signuppage2.jsx"
 import SignupPage3 from "/PAGES/signuppage3.jsx"
 import SignupPage4 from "/PAGES/signuppage4.jsx"
+import DisplayPage from "/PAGES/DisplayPage.jsx"
 import {Routes, Route} from 'react-router-dom'
 import NavBar from '../components/NavBar';
 import "/STYLES/SignupPage.css"
@@ -23,6 +24,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/SignupPage" element={<SignupPage />} />
               <Route path="*" element={<NotFoundPage />} />
+              <Route path = "/DisplayPage" element = {<DisplayPage/>}/>
         </Routes>
       </main>  
     </div>

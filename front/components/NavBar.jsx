@@ -1,12 +1,17 @@
 import { useNavigation } from '/PAGES/usenavigation.jsx';
 
 function NavBar() {
-  const { goToHome, goToSignup } = useNavigation();
+  const { goToHome, goToSignup , goToDisplay} = useNavigation();
 
   return (
     <nav>
-      <button onClick={goToHome}>Home</button>
-      <button onClick={goToSignup}>Signup</button>
+      <button 
+                type="button"
+                className="loginButtonClass" 
+                onClick={goToDisplay}
+              >
+                Login
+              </button>
     </nav>
   );
 }
