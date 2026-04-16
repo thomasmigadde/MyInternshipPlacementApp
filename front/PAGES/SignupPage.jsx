@@ -1,31 +1,54 @@
 // signuppage.jsx
 import React from "react";
 import {useState } from "react";
-import { useNavigation } from "./usenavigation.jsx";
-import {useNavigate} from "react-router-dom"
+import { useNavigation } from "/PAGES/usenavigation.jsx";
+import {api} from "/front/api.js";
+
 
 
 export default function SignupPage() {
+  const { goToDisplay } = useNavigation();
   const [text, setText] = useState("");
   const [email, setEmail] = useState("");
-  const { goToDisplay } = useNavigation();
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError(null);
+    setSuccess(null);
+
+    try {
+      const response = await api.post("/signup", { username: text, email: email });
+      setSuccess("Signup successful!");
+      setEmail("");
+      setText("");
+    }
+
+      catch (error) {
+        setError("Error during signup. Please try again.");
+
+      } 
+    }; 
   return (
        <div className="signup-page-container">
+        <form onSubmit={handleSubmit}>
         <div>
-             <input type = {"text"} placeholder = {"Username"} value = {text} onChange={(a) => setText(a.target.value)}  className = "inputClass"/>
+             <input type = {"text"} placeholder = {"Username"} value = {text} onChange={(a) => setText(a.target.value)} required className = "inputClass"/>
         </div>
         <div>
-            <input type = {"email"} placeholder = {"Email"} value = {email} onChange={(e) => setEmail(e.target.value)}  className = "inputClass"/>
+            <input type = {"email"} placeholder = {"Email"} value = {email} onChange={(e) => setEmail(e.target.value)} required className = "inputClass"/>
         </div> 
         <div>
           <button 
-                type="button"
+                type="submit"
                 className="loginButtonClass" 
                 onClick={goToDisplay}
               >
                 Login
               </button>
-        </div>     
+        </div>
+        </form>     
     </div>
   );
 }

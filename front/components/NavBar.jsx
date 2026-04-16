@@ -5,13 +5,7 @@ function NavBar() {
 
   return (
     <nav>
-      <button 
-                type="button"
-                className="loginButtonClass" 
-                onClick={goToDisplay}
-              >
-                Login
-              </button>
+     
     </nav>
   );
 }
