@@ -1,8 +1,8 @@
 from django.urls import path, include
 from . import views
 from rest_framework.routers import DefaultRouter
-from .views import StakeHolderViewSet
-from .views import StakeHolder_list
+
+from .views import StakeHolder_list, Stakeholder_detail
 
 app_name = 'placements'
 
