@@ -9,7 +9,12 @@ export const api = {
         'Content-Type': 'application/json',
       },
     });
-    return response.json();
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`API Error ${response.status}: ${errorText}`);
+      }
+      return response.json();
+    
   },
 
   // POST request
@@ -21,6 +26,10 @@ export const api = {
       },
       body: JSON.stringify(data),
     });
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`API Error ${response.status}: ${errorText}`);
+    }
     return response.json();
   },
 
@@ -33,6 +42,10 @@ export const api = {
       },
       body: JSON.stringify(data),
     });
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`API Error ${response.status}: ${errorText}`);
+    }
     return response.json();
   },
 
@@ -41,6 +54,10 @@ export const api = {
     const response = await fetch(`${API_BASE_URL}${endpoint}`, {
       method: 'DELETE',
     });
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`API Error ${response.status}: ${errorText}`);
+    }
     return response.json();
   },
 };

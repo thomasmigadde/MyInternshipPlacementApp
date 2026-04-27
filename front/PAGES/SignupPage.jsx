@@ -21,11 +21,11 @@ export default function SignupPage() {
     setLoading(true);
 
     try {
-      const response = await api.post("/stakeholders", { username: text, email: email });
+      const response = await api.post("http://127.0.0.1:8000/placements/stakeholders/", { username: text, email: email });
       setSuccess("Signup successful!");
       setEmail("");
       setText("");
-      goToDispaly();
+      goToDisplay();
     }
 
       catch (error) {
