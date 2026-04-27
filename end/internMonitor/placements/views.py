@@ -34,3 +34,7 @@ def Stakeholder_detail(request, pk):
             return Response(serializer.data)
         elif request.method == 'PUT':
              serializer = StakeHolderSerializer(stakeholder, data=request.data)
+             if serializer.is_valid():
+                 serializer.save()
+                 return Response(serializer.data)
+             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
